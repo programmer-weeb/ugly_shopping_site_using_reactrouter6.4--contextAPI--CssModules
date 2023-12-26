@@ -1,17 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import MainNavWillBeInAllPages from './MainNavWillBeInAllPages.jsx'
 import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 import Home from './Home'
 import Shopping, { shoppingLoader } from './Shopping'
-import ProductPage from './ProductPage'
-import { redirect } from 'react-router-dom'
+import ProductPage, { productPageLoader } from './ProductPage'
 import RootLayout from './RootLayout.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		{/* <App /> */}
 		<RouterProvider
 			router={createBrowserRouter([
 				{
@@ -28,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 						{
 							path: 'shopping/:productId',
 							element: <ProductPage />,
+							loader: productPageLoader,
 						},
 					],
 				},
