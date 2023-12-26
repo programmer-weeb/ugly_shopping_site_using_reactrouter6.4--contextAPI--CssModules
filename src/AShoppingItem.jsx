@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
+import styles from './modules/AShoppingItem.module.css'
 export default function AShoppingItem({
 	id,
-	tittle,
+	title,
 	price,
 	description,
 	category,
@@ -9,26 +10,27 @@ export default function AShoppingItem({
 	rating,
 }) {
 	return (
-		<div>
-			{/* make a card for each shopping item */}
-			<h3>
-				{tittle} id: {id}{' '}
-			</h3>
-			<p>{price}</p>
-			<p>{description}</p>
-			<p>{category}</p> <br />
-			<img src={image} alt={tittle} /> <br /> <br />
-			<div className="rating">
-				<p>rating rate: {rating.rate}</p>
-				<p>count of rating: {rating.count}</p>
-			</div>
+		<div className={styles.container}>
+			<h2 className={styles.title}>{title}</h2>
+			<p className={styles.description}>{description}</p>
+			<p className={styles.price}>Price: ${price}</p>
+			{category && (
+				<p className={styles.category}>Category: {category}</p>
+			)}
+			{image && <img src={image} alt={title} className={styles.image} />}
+			{rating && (
+				<div className={styles.ratingContainer}>
+					<p className={styles.rating}>Rating: {rating.rate}</p>
+					<p className={styles.rating}>Count: {rating.count}</p>
+				</div>
+			)}
 		</div>
 	)
 }
 
 AShoppingItem.propTypes = {
 	id: PropTypes.number.isRequired,
-	tittle: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
 	price: PropTypes.number.isRequired,
 	description: PropTypes.string.isRequired,
 	category: PropTypes.string,

@@ -1,0 +1,48 @@
+/* AShoppingItem.module.css */
+
+.container {
+	border: 1px solid #ddd;
+	padding: 16px;
+	border-radius: 8px;
+	margin: 16px;
+	max-width: 300px;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.description {
+	font-size: 14px;
+	margin: 8px 0;
+}
+
+.price {
+	font-size: 16px;
+	margin: 8px 0;
+}
+
+.category {
+	font-size: 14px;
+	font-style: italic;
+	color: #555;
+	margin: 8px 0;
+}
+
+.image {
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+	margin: 8px 0;
+}
+
+.ratingContainer {
+	margin-top: 8px;
+}
+
+.rating {
+	font-size: 14px;
+	margin: 4px 0;
+}
