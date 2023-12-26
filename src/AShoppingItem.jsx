@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 export default function AShoppingItem({
-    id,
+	id,
 	tittle,
 	price,
 	description,
@@ -9,13 +9,15 @@ export default function AShoppingItem({
 	rating,
 }) {
 	return (
-        <div >
+		<div>
 			{/* make a card for each shopping item */}
-			<h3>{tittle} id: {id} </h3>
+			<h3>
+				{tittle} id: {id}{' '}
+			</h3>
 			<p>{price}</p>
 			<p>{description}</p>
 			<p>{category}</p> <br />
-            <img src={image} alt={tittle}  /> <br /> <br />
+			<img src={image} alt={tittle} /> <br /> <br />
 			<div className="rating">
 				<p>rating rate: {rating.rate}</p>
 				<p>count of rating: {rating.count}</p>
