@@ -9,27 +9,13 @@ export default function AShoppingItem({
 	rating,
 }) {
 	return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            border: 'none',
-            width: '300px',
-            height: '300px',
-            margin: '10px',
-            padding: '10px',
-
-        }}>
+        <div >
 			{/* make a card for each shopping item */}
 			<h3>{tittle} id: {id} </h3>
 			<p>{price}</p>
 			<p>{description}</p>
 			<p>{category}</p> <br />
-            <img src={image} alt={tittle} style={{ 
-                height: '100px',
-                width: '100px',
-            }} /> <br /> <br />
+            <img src={image} alt={tittle}  /> <br /> <br />
 			<div className="rating">
 				<p>rating rate: {rating.rate}</p>
 				<p>count of rating: {rating.count}</p>
