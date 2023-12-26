@@ -1,0 +1,29 @@
+/* MainNav.module.css */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Distribute items with space between them */
+    background-color: #f4f4f4;
+    padding: 16px;
+    align-items: center;
+    /* Optional: Align items vertically in the center */
+}
+
+.title {
+    font-size: 20px;
+    margin: 0;
+    /* Remove margin-right and margin-bottom */
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #007bff;
+}
