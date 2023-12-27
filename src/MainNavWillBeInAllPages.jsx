@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import styles from './modules/MainNav.module.css'
+import { useState } from 'react'
 
 function MainNavWillBeInAllPages() {
+    const [cartsElement, setCartsElement] = useState([])
 	return (
 		<div className={styles.container}>
 			<h3 className={styles.title}>Here are some links =========>>>>>>>>>>>></h3>

@@ -20,10 +20,7 @@ export default function Shopping() {
 				}}
 			>
 				{loaderDataFromFakeAPI.map((element) => (
-                    <div key={element.id} onClick={() => {
-                        console.log(element.id)
-                        navigate(`/shopping/${element.id}`)
-                    }}>
+                    <div key={element.id} >
 						<AShoppingItem  {...element} /> <br />
 					</div>
 				))}
