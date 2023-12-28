@@ -11,7 +11,7 @@ export default function AShoppingItem({
 	description,
 	image,
 }) {
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(0)
     const contextData = useContext(AddedToCartItemsContext)
     
 
