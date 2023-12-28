@@ -27,6 +27,10 @@ export default function AShoppingItem({
     }
     
     const handleAddToCart = () => {
+
+        if (quantity === 0) {
+            return
+        }
         
         contextData.setAddedToCartItems((prevAddedToCartItems) => {
             return [...prevAddedToCartItems,  {id, quantity, title, total: price * quantity, price, image}]
