@@ -31,8 +31,7 @@ export default function AShoppingItem({
         contextData.setAddedToCartItems((prevAddedToCartItems) => {
             return [...prevAddedToCartItems,  {id, quantity, title, total: price * quantity, price}]
         })
-
-        setQuantity(1)
+        setQuantity(0)
         
         
     }
@@ -47,7 +46,7 @@ export default function AShoppingItem({
 				<p>Price: ${price}</p>
 				<div className={styles.quantityControl}>
 					<button onClick={handleDecrement}>-</button>
-					<input type="number" value={quantity -1} readOnly />
+					<input type="number" value={quantity} readOnly />
 					<button onClick={handleIncrement}>+</button>
 				</div>
                 <button className={styles.addToCartButton} onClick={handleAddToCart}>Add to Cart</button>
