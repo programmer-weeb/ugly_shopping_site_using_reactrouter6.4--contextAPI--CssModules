@@ -7,7 +7,7 @@ export default function Shopping() {
 
 	return (
 		<div>
-			<h1>Shopping</h1> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+			<h1>Shopping</h1>
 			{/* {loaderData && <h4>{JSON.stringify(loaderData)}</h4>} */}
 			<ul
 				style={{
