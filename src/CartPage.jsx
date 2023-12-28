@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types'
-import CartItem from './CartItem' // Assuming you have a CartItem component
+import CartItem from './CartItem'
+import { useContext } from 'react'
+import { AddedToCartItemsContext } from './contexts/AddedToCartItemsContext'
 
 const CartPage = ({ cartItems }) => {
+	const { setAddedToCartItems } = useContext(AddedToCartItemsContext)
+
+	function clearCart() {
+		setAddedToCartItems([])
+	}
+
 	return (
 		<div>
-			<h2>Your Cart</h2>
+            <h2>Your Cart</h2>
+            <button onClick={clearCart}>Clear Cart</button>
 			{cartItems.length === 0 ? (
 				<p>Your cart is empty</p>
 			) : (
