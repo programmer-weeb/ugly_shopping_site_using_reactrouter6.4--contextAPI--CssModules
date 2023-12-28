@@ -2,12 +2,19 @@ import { Link } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import styles from './modules/MainNav.module.css'
 import { useState } from 'react'
+import { useContext } from 'react'
+import { AddedToCartItemsContext } from './contexts/AddedToCartItemsContext'
 
 function MainNavWillBeInAllPages() {
     const [cartsElement, setCartsElement] = useState([])
+
+    const contextData = useContext(AddedToCartItemsContext)
+    
 	return (
 		<div className={styles.container}>
-			<h3 className={styles.title}>Here are some links =========>>>>>>>>>>>></h3>
+			<h3 className={styles.title}>
+				Here are some links =========>>>>>>>>>>>>
+			</h3>
 			<Link to="/shopping" className={styles.link}>
 				Shopping
 			</Link>
@@ -18,7 +25,9 @@ function MainNavWillBeInAllPages() {
 			<br />
 			<Link to="/" className={styles.link}>
 				Home /
-			</Link>
+            </Link>
+            
+            <Link to="/cart" className={styles.link}> cart {contextData.addedToCartItems.length} </Link>
 		</div>
 	)
 }
