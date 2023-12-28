@@ -29,7 +29,7 @@ export default function AShoppingItem({
     const handleAddToCart = () => {
         
         contextData.setAddedToCartItems((prevAddedToCartItems) => {
-            return [...prevAddedToCartItems,  {id, quantity, title, total: price * quantity, price}]
+            return [...prevAddedToCartItems,  {id, quantity, title, total: price * quantity, price, image}]
         })
         setQuantity(0)
         
