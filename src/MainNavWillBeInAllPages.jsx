@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom'
-import { Outlet } from 'react-router-dom'
 import styles from './modules/MainNav.module.css'
-import { useState } from 'react'
 import { useContext } from 'react'
 import { AddedToCartItemsContext } from './contexts/AddedToCartItemsContext'
 
 function MainNavWillBeInAllPages() {
-	const [cartsElement, setCartsElement] = useState([])
 
 	const contextData = useContext(AddedToCartItemsContext)
 
