@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Shopping() {
     const loaderDataFromFakeAPI = useLoaderData()
-    const navigate = useNavigate()
 
 	return (
 		<div>
