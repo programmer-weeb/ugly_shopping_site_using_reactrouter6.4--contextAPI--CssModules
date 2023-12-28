@@ -21,7 +21,7 @@ export default function AShoppingItem({
 	}
 
 	const handleDecrement = () => {
-		if (quantity > 1) {
+		if (quantity > 0) {
 			setQuantity((prevQuantity) => prevQuantity - 1)
 		}
     }
