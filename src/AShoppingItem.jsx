@@ -9,9 +9,7 @@ export default function AShoppingItem({
 	title,
 	price,
 	description,
-	category,
 	image,
-	rating,
 }) {
     const [quantity, setQuantity] = useState(1)
     const contextData = useContext(AddedToCartItemsContext)
