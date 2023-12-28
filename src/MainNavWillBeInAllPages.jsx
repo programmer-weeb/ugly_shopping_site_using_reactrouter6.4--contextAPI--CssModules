@@ -4,13 +4,23 @@ import { useContext } from 'react'
 import { AddedToCartItemsContext } from './contexts/AddedToCartItemsContext'
 
 function MainNavWillBeInAllPages() {
-
 	const contextData = useContext(AddedToCartItemsContext)
 
 	return (
 		<div className={styles.container}>
 			<h3 className={styles.title}>
-				Here are some links ========={'>'}{'>'}{'>'}{'>'}{'>'}{'>'}{'>'}{'>'}{'>'}{'>'}{'>'}{'>'}
+				Here are some links ========={'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
+				{'>'}
 			</h3>
 			<Link to="/shopping" className={styles.link}>
 				Shopping
@@ -27,13 +37,15 @@ function MainNavWillBeInAllPages() {
 			<Link to="/cart" className={styles.link}>
 				{' '}
 				cart{' '}
-				<span
-					style={{
-						color: 'red',
-					}}
-				>
-					{contextData.addedToCartItems.length}
-				</span>{' '}
+				{contextData.addedToCartItems.length === 0 ? null : (
+					<span
+						style={{
+							color: 'red',
+						}}
+					>
+						{contextData.addedToCartItems.length}
+					</span>
+				)}{' '}
 			</Link>
 		</div>
 	)
