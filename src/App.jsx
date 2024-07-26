@@ -9,43 +9,43 @@ import CartPage from './CartPage'
 import { useState } from 'react'
 
 export default function App() {
-	const [addedToCartItems, setAddedToCartItems] = useState([])
+  const [addedToCartItems, setAddedToCartItems] = useState([])
 
-	return (
-		<>
-			<AddedToCartItemsContext.Provider
-				value={{
-					addedToCartItems: addedToCartItems,
-                    setAddedToCartItems: setAddedToCartItems,
-				}}
-			>
-				<RouterProvider
-					router={createBrowserRouter([
-						{
-							path: '/',
-							element: <RootLayout />,
-							children: [
-								{ index: true, element: <Home /> },
-								{ path: 'home', element: <Home /> },
-								{
-									path: 'shopping',
-									element: <Shopping />,
-									loader: shoppingLoader,
-								},
-								{
-									path: 'shopping/:productId',
-									element: <ProductPage />,
-									loader: productPageLoader,
-								},
-								{
-									path: 'cart',
-									element: <CartPage cartItems={addedToCartItems} />,
-								},
-							],
-						},
-					])}
-				/>
-			</AddedToCartItemsContext.Provider>
-		</>
-	)
+  return (
+    <>
+      <AddedToCartItemsContext.Provider
+        value={{
+          addedToCartItems: addedToCartItems,
+          setAddedToCartItems: setAddedToCartItems,
+        }}
+      >
+        <RouterProvider
+          router={createBrowserRouter([
+            {
+              path: '/',
+              element: <RootLayout />,
+              children: [
+                { index: true, element: <Home /> },
+                { path: 'home', element: <Home /> },
+                {
+                  path: 'shopping',
+                  element: <Shopping />,
+                  loader: shoppingLoader,
+                },
+                {
+                  path: 'shopping/:productId',
+                  element: <ProductPage />,
+                  loader: productPageLoader,
+                },
+                {
+                  path: 'cart',
+                  element: <CartPage cartItems={addedToCartItems} />,
+                },
+              ],
+            },
+          ])}
+        />
+      </AddedToCartItemsContext.Provider>
+    </>
+  )
 }
